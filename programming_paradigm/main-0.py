@@ -18,12 +18,8 @@ def main():
     # Perform operations based on the command
     if command == "deposit" and amount is not None:
         account.deposit(amount)
-        print(f"Deposited: ${amount}")
     elif command == "withdraw" and amount is not None:
-        if account.withdraw(amount):
-            print(f"Withdrew: ${amount}")
-        else:
-            print("Insufficient funds.")
+        account.withdraw(amount)
     elif command == "display":
         account.display_balance()
     else:
